@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden;
 }
 
 .container {
@@ -17,8 +18,7 @@ body {
     width: 90%;
     max-width: 800px;
     padding: 20px;
-    overflow: hidden;
-    margin: 20px auto;
+    overflow: auto;
 }
 
 h1 {
@@ -40,6 +40,8 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    max-height: 400px;
+    overflow-y: auto; /* Adiciona rolagem se necessário */
 }
 
 li {

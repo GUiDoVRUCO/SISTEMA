@@ -8,83 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Agendamento de Horários</h1>
-        </header>
-        <main>
-            <section id="schedule">
-                <h2>Horários Disponíveis</h2>
-                <ul id="timeSlots">
-                    <!-- Horários serão adicionados aqui pelo JavaScript -->
-                </ul>
-            </section>
-            <section id="bookingForm">
-                <h2>Agendar Horário</h2>
-                <label for="timeSelect">Escolha um horário:</label>
-                <select id="timeSelect">
-                    <!-- Horários serão adicionados aqui pelo JavaScript -->
-                </select>
-
-                <label for="serviceSelect">Escolha um serviço:</label>
-                <select id="serviceSelect">
-                    <option value="reflexo">Reflexo</option>
-                    <option value="nevou">Nevou</option>
-                    <option value="luzes">Luzes</option>
-                    <option value="pigmentacao">Pigmentação</option>
-                    <option value="alinhamento">Alinhamento</option>
-                    <option value="alisamento">Alisamento</option>
-                </select>
-
-                <button onclick="bookTime()">Agendar</button>
-            </section>
-            <section id="pricingTable">
-                <h2>Tabela de Preços e Tempo</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Serviço</th>
-                            <th>Tempo Estimado</th>
-                            <th>Preço</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Reflexo</td>
-                            <td>30 min</td>
-                            <td>R$ 80</td>
-                        </tr>
-                        <tr>
-                            <td>Nevou</td>
-                            <td>45 min</td>
-                            <td>R$ 100</td>
-                        </tr>
-                        <tr>
-                            <td>Luzes</td>
-                            <td>1h 30min</td>
-                            <td>R$ 150</td>
-                        </tr>
-                        <tr>
-                            <td>Pigmentação</td>
-                            <td>1h</td>
-                            <td>R$ 90</td>
-                        </tr>
-                        <tr>
-                            <td>Alinhamento</td>
-                            <td>20 min</td>
-                            <td>R$ 60</td>
-                        </tr>
-                        <tr>
-                            <td>Alisamento</td>
-                            <td>2h</td>
-                            <td>R$ 200</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-        <footer>
-            <p>© 2024 Barbearia. Todos os direitos reservados.</p>
-        </footer>
+        <h1>Agendamento de Horários</h1>
+        <div id="schedule">
+            <h2>Horários Disponíveis</h2>
+            <ul id="timeSlots">
+                <!-- Horários serão adicionados aqui pelo JavaScript -->
+            </ul>
+        </div>
+        <div id="bookingForm">
+            <h2>Agendar Horário</h2>
+            <label for="timeSelect">Escolha um horário:</label>
+            <select id="timeSelect">
+                <!-- Horários serão adicionados aqui pelo JavaScript -->
+            </select>
+            <label for="serviceSelect">Escolha um serviço:</label>
+            <select id="serviceSelect">
+                <option value="reflexo">Reflexo (30 min)</option>
+                <option value="nevou">Nevou (45 min)</option>
+                <option value="luzes">Luzes (90 min)</option>
+                <option value="pigmentacao">Pigmentação (60 min)</option>
+                <option value="alinhamento">Alinhamento (20 min)</option>
+                <option value="alisamento">Alisamento (120 min)</option>
+            </select>
+            <button onclick="bookTime()">Agendar</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
