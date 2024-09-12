@@ -17,6 +17,17 @@ const serviceDurations = {
     "corte": 60
 };
 
+// Preços de cada serviço
+const servicePrices = {
+    "reflexo": 70,
+    "nevou": 80,
+    "luzes": 300,
+    "pigmentacao": 200,
+    "alinhamento": 80,
+    "alisamento": 350,
+    "corte": 25
+};
+
 // Lista para armazenar os horários ocupados
 const bookedTimes = new Set();
 
@@ -79,12 +90,13 @@ function bookTime() {
     const selectedTime = document.getElementById("timeSelect").value;
     const selectedService = document.getElementById("serviceSelect").value;
     const serviceDuration = serviceDurations[selectedService] || 0;
+    const servicePrice = servicePrices[selectedService] || 0;
 
     if (selectedTime && selectedService) {
         const endTime = minutesToTime(timeToMinutes(selectedTime) + serviceDuration);
         bookedTimes.add(selectedTime);
         bookedTimes.add(endTime);
-        alert(`Horário agendado para ${selectedTime} com o serviço de ${selectedService}. O próximo horário disponível será a partir de ${endTime}.`);
+        alert(`Horário agendado para ${selectedTime} com o serviço de ${selectedService}. Preço: R$ ${servicePrice}. O próximo horário disponível será a partir de ${endTime}.`);
         updateSchedule();
     } else {
         alert("Por favor, selecione um horário e um serviço.");
