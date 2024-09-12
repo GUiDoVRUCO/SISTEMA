@@ -2,7 +2,8 @@
 const timeSlots = [
     "09:00", "09:30", "10:00", "10:30", "11:00",
     "13:00", "13:30", "14:00", "14:30", "15:00",
-    "15:30", "16:00", "16:30", "17:00", "17:30"
+    "15:30", "16:00", "16:30", "17:00", "17:30",
+    "18:00", "18:30", "19:00", "19:30", "20:00", "20:30"
 ];
 
 // Duração de cada serviço (em minutos)
@@ -12,7 +13,8 @@ const serviceDurations = {
     "luzes": 90,
     "pigmentacao": 60,
     "alinhamento": 20,
-    "alisamento": 120
+    "alisamento": 120,
+    "corte": 60
 };
 
 // Lista para armazenar os horários ocupados
@@ -42,6 +44,7 @@ function updateSchedule() {
     timeSlotsList.innerHTML = '';
     timeSelect.innerHTML = '';
 
+    // Criar conjunto de horários indisponíveis
     let unavailableTimes = new Set();
 
     // Adicionar horários ocupados

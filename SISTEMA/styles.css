@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .container {
@@ -16,7 +16,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
     padding: 20px;
     overflow: auto;
 }
@@ -40,8 +40,6 @@ ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 400px;
-    overflow-y: auto; /* Adiciona rolagem se necessário */
 }
 
 li {
@@ -86,14 +84,32 @@ button:hover {
     background: #e04e49;
 }
 
-footer {
-    text-align: center;
-    margin-top: 20px;
+#priceTable {
+    margin-top: 30px;
 }
 
-footer p {
-    font-size: 0.9em;
-    color: #777;
+#priceTable table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#priceTable th, #priceTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#priceTable th {
+    background-color: #f05053;
+    color: #fff;
+}
+
+#priceTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#priceTable tr:hover {
+    background-color: #ddd;
 }
 
 /* Responsivo para telas menores */
@@ -119,5 +135,10 @@ footer p {
     button {
         font-size: 1em;
         padding: 10px 20px;
+    }
+
+    #priceTable th, #priceTable td {
+        font-size: 0.9em;
+        padding: 6px;
     }
 }
